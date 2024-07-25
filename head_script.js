@@ -10,6 +10,21 @@
   f.parentNode.insertBefore(j, f);
 })(window, document, "script", "dataLayer", "GTM-M39DJPS");
 
+// MaskPhone
+function applyPhoneMask(selector) {
+  phoneAutoMask(selector, {
+    fallbackCountry: "ro",
+    l10n: "ro",
+    intlTelInput: {
+      preferredCountries: ["ro", "md"],
+    },
+  });
+}
+
+$(function () {
+  applyPhoneMask('input[name="formParams[phone]"]');
+  applyPhoneMask('input[name="phone"]');
+});
 
 // Loading Animation
 document.addEventListener("DOMContentLoaded", function () {
