@@ -506,18 +506,3 @@ $(function () {
     }
   }, 50);
 });
-
-$(function () {
-  function applyPhoneMask(selector) {
-    phoneAutoMask(selector, {
-      fallbackCountry: "ro",
-      l10n: "ro",
-      intlTelInput: {
-        preferredCountries: ["ro", "md"],
-      },
-    });
-  }
-
-  applyPhoneMask('input[name="formParams[phone]"]');
-  applyPhoneMask('input[name="phone"]');
-});
